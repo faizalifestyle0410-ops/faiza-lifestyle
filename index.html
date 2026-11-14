@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Faiza Lifestyle — মেয়েদের ও বাচ্চাদের পোশাকের অনলাইন শপ">
+<title>Faiza Lifestyle | Online Shop</title>
+<style>
+:root{--green:#263d35;--green2:#35584b;--cream:#f6f1e9;--sand:#e8d8c8;--rose:#b97867;--ink:#252724;--muted:#73766f;--line:#e9e6e0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;background:#fff}
+button,input,select,textarea{font:inherit}button{cursor:pointer}.topbar{background:var(--green);color:#f7eee4;text-align:center;padding:7px 12px;font-size:12px;letter-spacing:.3px}
+header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);padding:13px max(4%,calc((100% - 1180px)/2));display:flex;align-items:center;justify-content:space-between;gap:15px}
+.brand{font-weight:850;letter-spacing:1.4px;color:var(--green);font-size:24px;white-space:nowrap}.brand small{display:block;font-size:9px;letter-spacing:2.6px;color:var(--rose);font-weight:600}
+nav{display:flex;gap:22px}nav a{color:#343832;text-decoration:none;font-size:14px}nav a:hover{color:var(--rose)}
+.actions{display:flex;gap:8px}.iconbtn{border:1px solid var(--line);background:#fff;border-radius:9px;padding:9px 12px;color:var(--green)}
+.hero{background:var(--cream);padding:46px max(5%,calc((100% - 1120px)/2));display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.eyebrow{color:var(--rose);font-size:11px;letter-spacing:2px;font-weight:800}.hero h1{font-family:Georgia,serif;color:var(--green);font-size:clamp(38px,5vw,62px);line-height:1.06;margin:13px 0}.hero p{line-height:1.9;color:#62665e;max-width:470px}.hero img{width:100%;height:380px;object-fit:cover;border-radius:4px 70px 4px 70px}
+.btn{border:0;background:var(--green);color:#fff;border-radius:4px;padding:12px 20px;font-weight:650;display:inline-block;text-decoration:none}.btn:hover{background:var(--green2)}.btn.light{background:#fff;color:var(--green);border:1px solid var(--green)}
+main{max-width:1160px;margin:auto;padding:52px 4%}.sectiontitle{text-align:center;margin-bottom:24px}.sectiontitle h2{font-family:Georgia,serif;color:var(--green);font-size:34px;font-weight:500;margin:5px}.sectiontitle p{color:var(--muted);font-size:14px}
+.categories{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:55px}.category{position:relative;min-height:230px;overflow:hidden;background:var(--cream)}.category img{width:100%;height:260px;object-fit:cover;display:block;transition:transform .4s}.category:hover img{transform:scale(1.04)}.catlabel{position:absolute;bottom:16px;left:16px;background:#fff;padding:12px 17px;min-width:175px}.catlabel b{display:block;color:var(--green);font-family:Georgia,serif;font-size:20px}.catlabel span{font-size:12px;color:var(--muted)}
+.shophead{display:flex;justify-content:space-between;align-items:end;gap:12px}.shophead h2{font-family:Georgia,serif;color:var(--green);font-size:32px;font-weight:500;margin:0}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 24px}.filters button{border:1px solid var(--line);background:white;color:#4e554e;border-radius:30px;padding:8px 15px;font-size:13px}.filters button.active{background:var(--green);color:white;border-color:var(--green)}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product{border:1px solid var(--line);background:#fff}.product img{width:100%;height:245px;object-fit:cover;background:var(--cream);display:block}.pbody{padding:13px}.pbody h3{font-size:15px;margin:0 0 5px;font-weight:650}.meta{font-size:12px;color:var(--muted)}.price{color:var(--green);font-weight:800;margin:9px 0 11px}.pbody button{width:100%;padding:9px;border:1px solid var(--green);background:white;color:var(--green);border-radius:3px}.pbody button:hover{background:var(--green);color:white}
+.benefits{margin-top:58px;background:var(--cream);padding:27px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:center}.benefits b{display:block;color:var(--green);margin:5px}.benefits span{font-size:12px;color:var(--muted)}
+footer{background:var(--green);color:#f6eee6;padding:35px 5%;text-align:center}footer .brand{color:white}footer p{font-size:13px;color:#d8ded8}
+.overlay{position:fixed;inset:0;background:#0008;z-index:10;display:none;align-items:center;justify-content:center;padding:15px}.panel{background:white;width:min(620px,100%);max-height:90vh;overflow:auto;padding:22px;border-radius:10px}.panel h2{color:var(--green);margin-top:0}.close{float:right;border:0;background:#eee;border-radius:50%;width:32px;height:32px}
+.field{display:grid;gap:5px;margin:12px 0}.field label{font-size:13px;font-weight:650}.field input,.field textarea,.field select{width:100%;padding:10px;border:1px solid #d9d9d2;border-radius:5px;background:white}.cartrow{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding:10px 0;font-size:14px}.notice{background:#fff6e9;border:1px solid #f0dfc6;padding:12px;border-radius:6px;font-size:13px;line-height:1.6;margin:12px 0}.adminlink{color:#d8ded8;text-decoration:underline;background:none;border:0;font-size:12px}
+@media(max-width:800px){nav{gap:10px}nav a{font-size:12px}.products{grid-template-columns:repeat(2,1fr)}.product img{height:210px}.hero img{height:300px}}
+@media(max-width:580px){header{padding:11px 4%}.brand{font-size:20px}nav{display:none}.hero{grid-template-columns:1fr;padding:34px 5%;gap:22px}.hero img{height:240px;border-radius:4px 45px 4px 45px}.hero h1{font-size:43px}main{padding:38px 4%}.categories{gap:9px}.category img{height:180px}.catlabel{left:8px;bottom:8px;padding:8px;min-width:0}.catlabel b{font-size:15px}.catlabel span{font-size:10px}.products{gap:9px}.product img{height:175px}.pbody{padding:9px}.pbody h3{font-size:13px}.pbody button{font-size:12px}.benefits{grid-template-columns:1fr;padding:20px}.sectiontitle h2{font-size:29px}}
+</style>
+</head>
+<body>
+<div class="topbar">FAIZA LIFESTYLE — আপনার পছন্দের ফ্যাশন, এখন এক জায়গায়</div>
+<header>
+ <a href="#" style="text-decoration:none"><div class="brand">FAIZA LIFESTYLE<small>FASHION • STYLE • COMFORT</small></div></a>
+ <nav><a href="#home">হোম</a><a href="#collections">কালেকশন</a><a href="#shop">শপ</a><a href="#contact">যোগাযোগ</a></nav>
+ <div class="actions"><button class="iconbtn" onclick="openCart()">কার্ট <span id="cartCount">০</span></button><button class="iconbtn" id="accountBtn" onclick="openAdmin()">Admin Login</button></div>
+</header>
+<section class="hero" id="home">
+ <div><div class="eyebrow">WELCOME TO FAIZA LIFESTYLE</div><h1>Wear your<br>own story.</h1><p>মেয়েদের ও বাচ্চাদের জন্য বেছে নেওয়া সুন্দর পোশাক। আপনার প্রতিদিনের স্টাইলে যোগ হোক নতুন আনন্দ।</p><a href="#shop" class="btn">এখনই শপিং করুন</a></div>
+ <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1100&q=85" alt="Fashion collection">
+</section>
+<main>
+ <section id="collections"><div class="sectiontitle"><div class="eyebrow">EXPLORE OUR STYLE</div><h2>আমাদের কালেকশন</h2><p>আপনার ও পরিবারের ছোট্ট সদস্যদের জন্য</p></div>
+ <div class="categories">
+  <a class="category" href="#shop" onclick="setFilter('women');return true"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=900&q=85" alt="Women's clothing"><div class="catlabel"><b>Women's Wear</b><span>মেয়েদের পোশাক</span></div></a>
+  <a class="category" href="#shop" onclick="setFilter('kids');return true"><img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=900&q=85" alt="Kids clothing"><div class="catlabel"><b>Kids' Wear</b><span>বাচ্চাদের পোশাক</span></div></a>
+ </div></section>
+ <section id="shop"><div class="shophead"><div><div class="eyebrow">SHOP THE COLLECTION</div><h2>নতুন পণ্য</h2></div><span class="meta" id="productCount"></span></div>
+ <div class="filters"><button class="active" data-filter="all" onclick="setFilter('all')">সব পণ্য</button><button data-filter="women" onclick="setFilter('women')">মেয়েদের পোশাক</button><button data-filter="kids" onclick="setFilter('kids')">বাচ্চাদের পোশাক</button></div>
+ <div class="products" id="products"></div></section>
+ <section class="benefits"><div>♡<b>পছন্দের কালেকশন</b><span>বেছে নেওয়া সুন্দর ডিজাইন</span></div><div>♧<b>সহজ অর্ডার</b><span>মোবাইল থেকেই অর্ডার করুন</span></div><div>✧<b>সাপোর্ট</b><span>প্রয়োজনে আমাদের সঙ্গে যোগাযোগ</span></div></section>
+ <section id="contact" style="padding-top:42px;text-align:center"><div class="eyebrow">GET IN TOUCH</div><h2 style="font-family:Georgia,serif;color:var(--green);font-weight:500">যোগাযোগ</h2><p class="meta">আপনার ব্যবসার ফোন নম্বর, ঠিকানা ও সামাজিক যোগাযোগমাধ্যমের লিংক এখানে যুক্ত করা হবে।</p></section>
+</main>
+<footer><div class="brand">FAIZA LIFESTYLE</div><p>FASHION • STYLE • COMFORT</p><p>© 2026 Faiza Lifestyle. All rights reserved.</p><button class="adminlink" onclick="openAdmin()">অ্যাডমিন ডেমো</button></footer>
+<div class="overlay" id="cartOverlay" onclick="if(event.target===this)closePanel('cartOverlay')"><div class="panel"><button class="close" onclick="closePanel('cartOverlay')">×</button><h2>আপনার শপিং কার্ট</h2><div id="cartItems"></div><p><b>মোট: ৳ <span id="total">০</span></b></p><div class="field"><label>আপনার নাম</label><input id="buyerName" placeholder="নাম লিখুন"></div><div class="field"><label>মোবাইল নম্বর</label><input id="buyerPhone" placeholder="01XXXXXXXXX"></div><div class="field"><label>ডেলিভারি ঠিকানা</label><textarea id="buyerAddress" rows="2" placeholder="সম্পূর্ণ ঠিকানা"></textarea></div><div class="notice">এটি অর্ডার ফর্মের প্রাথমিক ডেমো। অর্ডার বাস্তবে গ্রহণ ও পেমেন্ট চালু করতে সার্ভার, ব্যবসার যোগাযোগ নম্বর এবং পেমেন্ট গেটওয়ে যুক্ত করতে হবে।</div><button class="btn" onclick="placeDemoOrder()">অর্ডার রিকোয়েস্ট তৈরি করুন</button></div></div>
+<div class="overlay" id="loginOverlay" onclick="if(event.target===this)closePanel('loginOverlay')"><div class="panel" style="max-width:430px"><button class="close" onclick="closePanel('loginOverlay')">×</button><h2>অ্যাডমিন লগইন</h2><p class="meta">শুধু সার্ভার থেকে অনুমোদন পাওয়া অ্যাডমিন প্রবেশ করতে পারবেন।</p><div class="field"><label>ইমেইল</label><input id="loginEmail" type="email" autocomplete="username" placeholder="আপনার অ্যাডমিন ইমেইল"></div><div class="field"><label>পাসওয়ার্ড</label><input id="loginPassword" type="password" autocomplete="current-password" placeholder="পাসওয়ার্ড"></div><button class="btn" id="loginSubmit" onclick="loginAdmin()">নিরাপদে লগইন করুন</button><div id="loginMsg" class="meta" role="status" style="margin-top:12px"></div><div class="notice">Firebase Authentication আপনার ইমেইল/পাসওয়ার্ড যাচাই করবে এবং নির্দিষ্ট Admin UID মিলিয়ে প্রবেশ অনুমোদন করবে।</div></div></div>
+<div class="overlay" id="adminOverlay" onclick="if(event.target===this)closePanel('adminOverlay')"><div class="panel"><button class="close" onclick="closePanel('adminOverlay')">×</button><h2>অ্যাডমিন প্যানেল</h2><button class="btn light" style="float:right;margin-top:-48px" onclick="logoutAdmin()">লগ আউট</button><div class="notice">আপনি Admin হিসেবে লগইন করেছেন। পণ্য সংরক্ষণ এখনো এই ফাইলের ব্রাউজার-ডেমো; Firestore-এ লাইভ সংরক্ষণ এখনো যুক্ত হয়নি।</div><div class="field"><label>পণ্যের নাম</label><input id="newName" placeholder="যেমন: কটন থ্রি-পিস"></div><div class="field"><label>ক্যাটাগরি</label><select id="newType"><option value="women">মেয়েদের পোশাক</option><option value="kids">বাচ্চাদের পোশাক</option></select></div><div class="field"><label>দাম (টাকা)</label><input id="newPrice" type="number" min="0" placeholder="1200"></div><div class="field"><label>পণ্যের ছবি</label><input id="newImage" type="file" accept="image/*"></div><div class="field"><label>ভিডিও (ঐচ্ছিক)</label><input id="newVideo" type="file" accept="video/*"></div><button class="btn" onclick="addProduct()">পণ্য যোগ করুন</button><div id="adminMsg" class="meta" style="margin-top:12px"></div></div></div>
+<script>
+const bn=n=>String(n).replace(/\d/g,d=>'০১২৩৪৫৬৭৮৯'[d]);
+let products=[
+{id:1,name:'এলিগ্যান্ট ড্রেস',type:'women',price:1250,img:'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=85'},
+{id:2,name:'ক্লাসিক ফ্যাশন সেট',type:'women',price:1550,img:'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=700&q=85'},
+{id:3,name:'কিডস পার্টি ড্রেস',type:'kids',price:850,img:'https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=700&q=85'},
+{id:4,name:'কিউট কিডস আউটফিট',type:'kids',price:690,img:'https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=700&q=85'}
+];let cart=[];
+function renderProducts(filter='all'){let shown=products.filter(p=>filter==='all'||p.type===filter);document.getElementById('productCount').textContent=bn(shown.length)+'টি পণ্য';document.getElementById('products').innerHTML=shown.map(p=>`<article class="product"><img src="${p.img}" alt="${p.name}"><div class="pbody"><h3>${p.name}</h3><div class="meta">${p.type==='women'?'মেয়েদের পোশাক':'বাচ্চাদের পোশাক'}</div><div class="price">৳ ${bn(p.price)}</div><button onclick="addToCart(${p.id})">কার্টে যোগ করুন</button></div></article>`).join('')}
+function setFilter(f){document.querySelectorAll('.filters button').forEach(b=>b.classList.toggle('active',b.dataset.filter===f));renderProducts(f)}
+function addToCart(id){let p=products.find(x=>x.id===id);cart.push(p);document.getElementById('cartCount').textContent=bn(cart.length);alert('পণ্যটি কার্টে যোগ হয়েছে।')}
+function openCart(){document.getElementById('cartItems').innerHTML=cart.length?cart.map((p,i)=>`<div class="cartrow"><span>${p.name}</span><span>৳ ${bn(p.price)} <button onclick="removeCart(${i})" style="border:0;background:none;color:#a44">×</button></span></div>`).join(''):'কার্ট এখন খালি';document.getElementById('total').textContent=bn(cart.reduce((s,p)=>s+p.price,0));document.getElementById('cartOverlay').style.display='flex'}
+function removeCart(i){cart.splice(i,1);document.getElementById('cartCount').textContent=bn(cart.length);openCart()}
+function closePanel(id){document.getElementById(id).style.display='none'}
+function openAdmin(){if(window.adminAuthState==='admin'){document.getElementById('adminOverlay').style.display='flex'}else{document.getElementById('loginOverlay').style.display='flex'}}
+function addProduct(){let name=document.getElementById('newName').value.trim(),price=Number(document.getElementById('newPrice').value),file=document.getElementById('newImage').files[0],type=document.getElementById('newType').value;if(!name||!price||!file){document.getElementById('adminMsg').textContent='নাম, দাম ও ছবি দিন।';return}let img=URL.createObjectURL(file);products.push({id:Date.now(),name,type,price,img});renderProducts(document.querySelector('.filters button.active')?.dataset.filter||'all');document.getElementById('adminMsg').textContent='পণ্যটি এই ব্রাউজারের ডেমো তালিকায় যোগ হয়েছে।';document.getElementById('newName').value='';document.getElementById('newPrice').value='';document.getElementById('newImage').value='';}
+function placeDemoOrder(){let name=document.getElementById('buyerName').value.trim(),phone=document.getElementById('buyerPhone').value.trim(),address=document.getElementById('buyerAddress').value.trim();if(!cart.length||!name||!phone||!address){alert('কার্টে পণ্য যোগ করুন এবং সব তথ্য পূরণ করুন।');return}alert('ডেমো অর্ডার তথ্য প্রস্তুত হয়েছে। লাইভ অর্ডার গ্রহণের জন্য ওয়েবসাইটে সার্ভার ও যোগাযোগ ব্যবস্থা যুক্ত করতে হবে।');}
+renderProducts();
+</script>
+
+<script type="module">
+// Firebase Authentication for FAIZA LIFESTYLE
+// Admin UID is checked after Firebase verifies the email/password.
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js';
+import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js';
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyDy7MthsHTBremJQvHzHSEcnWR5hGwPRx2g',
+  authDomain: 'faiza-lifestyle.firebaseapp.com',
+  projectId: 'faiza-lifestyle',
+  storageBucket: 'faiza-lifestyle.firebasestorage.app',
+  messagingSenderId: '384409429005',
+  appId: '1:384409429005:web:af902e5662d2d4a8f06144',
+  measurementId: 'G-JQR4EXEZ6F'
+};
+
+const ADMIN_UID = 'LNVqiaHdTQN0knuES6szhB0ZtB03';
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+window.adminAuthState = 'signed-out';
+
+function showAdmin(user) {
+  const isAdmin = !!user && user.uid === ADMIN_UID;
+  window.adminAuthState = isAdmin ? 'admin' : 'signed-out';
+  document.getElementById('accountBtn').textContent = isAdmin ? 'Admin Panel' : 'Admin Login';
+  if (!isAdmin && user) {
+    signOut(auth).catch(() => {});
+    document.getElementById('loginMsg').textContent = 'এই অ্যাকাউন্টটি Admin হিসেবে অনুমোদিত নয়।';
+  }
+}
+
+onAuthStateChanged(auth, user => showAdmin(user));
+
+window.loginAdmin = async function () {
+  const msg = document.getElementById('loginMsg');
+  const email = document.getElementById('loginEmail').value.trim();
+  const password = document.getElementById('loginPassword').value;
+  if (!email || !password) { msg.textContent = 'ইমেইল ও পাসওয়ার্ড দিন।'; return; }
+  const btn = document.getElementById('loginSubmit');
+  btn.disabled = true; msg.textContent = 'যাচাই হচ্ছে…';
+  try {
+    const credential = await signInWithEmailAndPassword(auth, email, password);
+    if (credential.user.uid !== ADMIN_UID) {
+      await signOut(auth);
+      msg.textContent = 'এই অ্যাকাউন্টটি Admin হিসেবে অনুমোদিত নয়।';
+      return;
+    }
+    window.adminAuthState = 'admin';
+    document.getElementById('loginPassword').value = '';
+    closePanel('loginOverlay');
+    document.getElementById('adminOverlay').style.display = 'flex';
+  } catch (e) {
+    msg.textContent = 'লগইন হয়নি। ইমেইল/পাসওয়ার্ড ঠিক আছে কি না দেখুন।';
+  } finally { btn.disabled = false; }
+};
+
+window.logoutAdmin = async function () {
+  try { await signOut(auth); } finally {
+    window.adminAuthState = 'signed-out';
+    closePanel('adminOverlay');
+    closePanel('loginOverlay');
+    document.getElementById('accountBtn').textContent = 'Admin Login';
+  }
+};
+</script>
+
+</body></html>
